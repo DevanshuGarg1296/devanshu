@@ -5,6 +5,7 @@ services:
     image: 548694502413.dkr.ecr.ap-south-1.amazonaws.com/infiworxnms/nms-core
     restart: unless-stopped
     container_name: infiworxnms-core
+    pids_limit: 25640
     ports:
       - "8098:80"
     volumes:
@@ -17,4 +18,4 @@ services:
     command: /bin/bash -c "service apache2 start && tail -f /dev/null"
 
 
-
+0 2 * * * ps -eo ppid=,stat= | awk '$2 ~ /^Z/ {print $1}' | sort -u | xargs -r kill -15
