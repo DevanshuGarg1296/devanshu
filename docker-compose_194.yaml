@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  infiworxnms-core:
+    image: 548694502413.dkr.ecr.ap-south-1.amazonaws.com/infiworxnms/nms-core
+    restart: unless-stopped
+    container_name: infiworxnms-core
+    ports:
+      - "8098:80"
+    volumes:
+      - /root/NMS_Deployment/infiworx-nms-core/:/var/www/html/infiworxnms-core:Z 
+      - /root/NMS_Deployment/automanix-nms:/var/www/html/infiworxnms:Z
+    privileged: true
+#    restart: always
+    tty: true
+    stdin_open: true
+    command: /bin/bash -c "service apache2 start && tail -f /dev/null"
+
+
+
