@@ -1,0 +1,59 @@
+MariaDB [nms_core]> Select * from settings where name like '%thread%';
++----------------+-------+
+| name           | value |
++----------------+-------+
+| device_threads | 1     |
+| max_threads    | 10    |
++----------------+-------+
+2 rows in set (0.001 sec)
+
+MariaDB [nms_core]> exit
+Bye
+root@localhost:~/devanshu# mysql -u infi -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 536374
+Server version: 10.11.15-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> SHOW VARIABLES LIKE 'max_connections'
+    -> ;
++-----------------+-------+
+| Variable_name   | Value |
++-----------------+-------+
+| max_connections | 151   |
++-----------------+-------+
+1 row in set (0.001 sec)
+
+MariaDB [(none)]> SHOW VARIABLES LIKE 'innodb_buffer_pool_size';
++-------------------------+-----------+
+| Variable_name           | Value     |
++-------------------------+-----------+
+| innodb_buffer_pool_size | 134217728 |
++-------------------------+-----------+
+1 row in set (0.000 sec)
+
+MariaDB [(none)]> use nms_core;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MariaDB [nms_core]> select * from poller_time order by id desc limit 10;
++-----+-------+-----------+---------------------+---------------------+
+| id  | pid   | poller_id | start_time          | end_time            |
++-----+-------+-----------+---------------------+---------------------+
+| 964 | 18172 |         1 | 2026-06-08 17:43:03 | 2026-06-08 17:43:05 |
+| 963 | 18161 |         1 | 2026-06-08 17:43:02 | 2026-06-08 17:43:05 |
+| 962 | 18149 |         1 | 2026-06-08 17:43:02 | 2026-06-08 17:43:05 |
+| 961 | 18138 |         1 | 2026-06-08 17:43:02 | 2026-06-08 17:43:05 |
+| 960 | 18127 |         1 | 2026-06-08 17:43:02 | 2026-06-08 17:43:05 |
+| 959 | 18114 |         1 | 2026-06-08 17:43:02 | 2026-06-08 17:43:05 |
+| 958 | 18100 |         1 | 2026-06-08 17:43:02 | 2026-06-08 17:43:04 |
+| 957 | 18037 |         1 | 2026-06-08 17:43:02 | 2026-06-08 17:43:04 |
+| 956 | 17978 |         1 | 2026-06-08 17:43:02 | 2026-06-08 17:43:04 |
+| 955 | 17974 |         1 | 2026-06-08 17:43:02 | 2026-06-08 17:43:03 |
++-----+-------+-----------+---------------------+---------------------+
+10 rows in set (0.000 sec)
