@@ -1,0 +1,76 @@
+MariaDB [nms_core]> Select * from settings where name like '%poller%';
++--------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+| name                                       | value                                                                                                        |
++--------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+| boost_poller_mem_limit                     | 1024                                                                                                         |
+| debounce_mpf_gpsmap_gpsmap_poller_bottom   | 1778478256                                                                                                   |
+| debounce_mpf_monitor_monitor_poller_bottom | 1778585469                                                                                                   |
+| debounce_mpf_thold_thold_poller_bottom     | 1778585469                                                                                                   |
+| debounce_mpf_wmi_wmi_poller_bottom         | 1778585469                                                                                                   |
+| default_poller                             | 1                                                                                                            |
+| dsstats_poller_mem_limit                   | 1024                                                                                                         |
+| poller_debug                               |                                                                                                              |
+| poller_enabled                             | on                                                                                                           |
+| poller_interval                            | 60                                                                                                           |
+| poller_lastrun                             | 1780915321                                                                                                   |
+| poller_lastrun_1                           | 1780915321                                                                                                   |
+| poller_refresh_output_table                |                                                                                                              |
+| poller_replicate_data_input_crc            | 78cab5216cdcfd0fd695ee4039d23fe518265bfe                                                                     |
+| poller_replicate_data_input_fields_crc     | 1deef25d22f7775ca015a947acf58cb2e0e75177                                                                     |
+| poller_replicate_data_source_cache_crc_    | 441208d2d6730235c8a0e9f1a9117f6166c89958                                                                     |
+| poller_replicate_data_source_cache_crc_1   | 96c5cb5441b2c345e7e997c4d90327da9fdee725                                                                     |
+| poller_replicate_device_cache_crc_1        | 436a99182af1352feaf73ce5df0cf1eb25834588                                                                     |
+| poller_replicate_snmp_query_crc            | e4c9438cd3a7b0e73e384fa67af6c241ee177bc9                                                                     |
+| poller_sync_interval                       | 7200                                                                                                         |
+| poller_type                                | 2                                                                                                            |
+| stats_poller                               | Time:37.2581 Method:spine Processes:1 Threads:1 Hosts:90 HostsPerProcess:90 DataSources:503 RRDsProcessed:10 |
+| time_last_change_poller_item               | 1780914878                                                                                                   |
++--------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+23 rows in set (0.000 sec)
+
+MariaDB [nms_core]> Select * from settings where name like '%log%';
++--------------------------------+-----------------------------------------------------------+
+| name                           | value                                                     |
++--------------------------------+-----------------------------------------------------------+
+| alert_syslog                   | off                                                       |
+| install_tp_Synology_NAS_xml_gz | Synology_NAS.xml.gz                                       |
+| log_analysis_password          |                                                           |
+| log_analysis_password_2        |                                                           |
+| log_analysis_port              | 9200                                                      |
+| log_analysis_port_2            | 9200                                                      |
+| log_analysis_timeout           | 10                                                        |
+| log_analysis_timeout_2         | 10                                                        |
+| log_analysis_url               |                                                           |
+| log_analysis_url_2             |                                                           |
+| log_analysis_username          |                                                           |
+| log_analysis_username_2        |                                                           |
+| log_destination                | 1                                                         |
+| log_perror                     | on                                                        |
+| log_pstats                     | off                                                       |
+| log_pwarn                      | off                                                       |
+| log_refresh_interval           | 60                                                        |
+| log_validation                 | off                                                       |
+| log_verbosity                  | 2                                                         |
+| logrotate_enabled              | on                                                        |
+| logrotate_frequency            | 1                                                         |
+| logrotate_lastrun              | 1780876813                                                |
+| logrotate_retain               | 7                                                         |
+| monitor_log_storage            | 31                                                        |
+| num_rows_log                   | 500                                                       |
+| path_boost_log                 |                                                           |
+| path_cactilog                  | /var/www/html/infiworxnms-core/cacti/log/cacti.log        |
+| path_stderrlog                 | /var/www/html/infiworxnms-core/cacti/log/cacti_stderr.log |
+| reports_log_verbosity          | 2                                                         |
+| spine_log_level                | 0                                                         |
+| thold_log_cacti                | on                                                        |
+| thold_log_changes              | on                                                        |
+| thold_log_debug                | on                                                        |
+| thold_log_storage              | 31                                                        |
+| thold_log_unknown_to_zero      | off                                                       |
+| thold_syslog_facility          | 24                                                        |
+| thold_syslog_priority          | 4                                                         |
+| time_last_change_thold_log     | 1780393861                                                |
++--------------------------------+-----------------------------------------------------------+
+38 rows in set (0.001 sec)
+
+MariaDB [nms_core]> 
