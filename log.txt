@@ -23,3 +23,74 @@ OK u:0.00 s:0.00 r:0.05
 OK u:0.00 s:0.00 r:0.05
 2026-06-10 12:21:43 - SYSTEM STATS: Time:2.9420 Method:spine Processes:10 Threads:10 Hosts:67 HostsPerProcess:7 DataSources:329 RRDsProcessed:22
 root@localhost:~/devanshu# 
+
+
+MariaDB [nms_core]> select * from poller_output;
++---------------+----------+---------------------+--------+
+| local_data_id | rrd_name | time                | output |
++---------------+----------+---------------------+--------+
+|          5055 |          | 2026-06-10 17:36:02 | U      |
+|          5025 |          | 2026-06-10 17:36:02 | U      |
+|          5018 |          | 2026-06-10 17:36:02 | U      |
++---------------+----------+---------------------+--------+
+3 rows in set (0.001 sec)
+
+MariaDB [nms_core]> select local_data_id,rrd_name,data_source_path from data_template_data where local_data_id IN (5018,5025,5055);
+ERROR 1054 (42S22): Unknown column 'rrd_name' in 'SELECT'
+MariaDB [nms_core]> select local_data_id,data_source_path from data_template_data where local_data_id IN (5018,5025,5055);
++---------------+--------------------------------------------------------------------------------+
+| local_data_id | data_source_path                                                               |
++---------------+--------------------------------------------------------------------------------+
+|          5018 | <path_rra>/hp_ip_console_switch_g2_2x1ex16_-_af621-27-e0-f5_sscpuidle_5018.rrd |
+|          5025 | <path_rra>/hp_ip_console_switch_g2_2x1ex16_-_af621-27-e0-f5_load_5min_5025.rrd |
+|          5055 | <path_rra>/isro_testing02_load_5min_5055.rrd                                   |
++---------------+--------------------------------------------------------------------------------+
+3 rows in set (0.000 sec)
+
+MariaDB [nms_core]> select * from poller_time
+    -> ;
++-----+-------+-----------+---------------------+---------------------+
+| id  | pid   | poller_id | start_time          | end_time            |
++-----+-------+-----------+---------------------+---------------------+
+| 244 | 13850 |         1 | 2026-06-10 17:49:02 | 2026-06-10 17:49:04 |
+| 245 | 13854 |         1 | 2026-06-10 17:49:02 | 2026-06-10 17:49:03 |
+| 246 | 13875 |         1 | 2026-06-10 17:49:02 | 2026-06-10 17:49:03 |
+| 247 | 13927 |         1 | 2026-06-10 17:49:02 | 2026-06-10 17:49:03 |
+| 248 | 13944 |         1 | 2026-06-10 17:49:02 | 2026-06-10 17:49:03 |
+| 249 | 13954 |         1 | 2026-06-10 17:49:02 | 2026-06-10 17:49:03 |
+| 250 | 13965 |         1 | 2026-06-10 17:49:02 | 2026-06-10 17:49:03 |
+| 251 | 13976 |         1 | 2026-06-10 17:49:03 | 2026-06-10 17:49:04 |
+| 252 | 13987 |         1 | 2026-06-10 17:49:03 | 2026-06-10 17:49:04 |
++-----+-------+-----------+---------------------+---------------------+
+9 rows in set (0.001 sec)
+
+MariaDB [nms_core]> truncate table poller_output;
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [nms_core]> select * from  poller_output;
++---------------+----------+---------------------+--------+
+| local_data_id | rrd_name | time                | output |
++---------------+----------+---------------------+--------+
+|          5014 |          | 2026-06-10 17:51:01 | U      |
+|          5019 |          | 2026-06-10 17:51:01 | U      |
++---------------+----------+---------------------+--------+
+2 rows in set (0.000 sec)
+
+MariaDB [nms_core]> truncate table poller_output;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [nms_core]> select * from  poller_output;
+Empty set (0.000 sec)
+
+MariaDB [nms_core]> select * from  poller_output;
+Empty set (0.000 sec)
+
+MariaDB [nms_core]> select * from  poller_output;
++---------------+----------+---------------------+--------+
+| local_data_id | rrd_name | time                | output |
++---------------+----------+---------------------+--------+
+|          5018 |          | 2026-06-10 17:54:01 | U      |
+|          5055 |          | 2026-06-10 17:54:01 | U      |
+|          5025 |          | 2026-06-10 17:54:01 | U      |
++---------------+----------+---------------------+--------+
+3 rows in set (0.001 sec)
