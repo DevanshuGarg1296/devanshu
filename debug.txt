@@ -1,0 +1,433 @@
+root@5f47bfab75b9:/# php /var/www/html/infiworxnms-core/poller.php --force --debug
+Total[0.0004] NOTE: Poller Int: '60', Cactid/Cron Int: '60', Time Since Last: '57.62', Max Runtime '58', Poller Runs: '1'
+Total[0.0110] WARNING: Poller Output Table not Empty.  Issues: 11, DS[5017, 5146, 5024, 5093, 5122, 5110, 5098, 5209, 5054, 5194, 5176]
+Total[0.0119] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=0 --last=136 --mibs]
+Total[0.1132] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=137 --last=145 --mibs]
+Total[0.2144] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=146 --last=159 --mibs]
+Total[0.3154] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=220 --last=225 --mibs]
+Total[0.4164] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=226 --last=232 --mibs]
+Total[0.5174] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=233 --last=240 --mibs]
+Total[0.6184] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=241 --last=248 --mibs]
+Total[0.7194] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=249 --last=256 --mibs]
+Total[0.8203] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=257 --last=260 --mibs]
+Waiting on 9 of 9 pollers.
+Total[0.9251] Parsed MULTI output field 'reads:0' [map reads->reads]
+Total[0.9251] Parsed MULTI output field 'writes:0' [map writes->writes]
+Total[0.9253] Parsed MULTI output field 'min:0.2990' [map min->min]
+Total[0.9254] Parsed MULTI output field 'avg:0.3432' [map avg->avg]
+Total[0.9254] Parsed MULTI output field 'max:0.3780' [map max->max]
+Total[0.9254] Parsed MULTI output field 'dev:0.0245' [map dev->dev]
+Total[0.9254] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[0.9256] Parsed MULTI output field 'min:0.3820' [map min->min]
+Total[0.9256] Parsed MULTI output field 'avg:0.4324' [map avg->avg]
+Total[0.9256] Parsed MULTI output field 'max:0.5080' [map max->max]
+Total[0.9256] Parsed MULTI output field 'dev:0.0324' [map dev->dev]
+Total[0.9256] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[0.9258] Parsed MULTI output field 'vir_detected:0' [map vir_detected->vir_detected]
+Total[0.9259] Parsed MULTI output field 'vir_blocked:0' [map vir_blocked->vir_blocked]
+Total[0.9259] Parsed MULTI output field 'vir_det_web:0' [map vir_det_web->vir_det_web]
+Total[0.9259] Parsed MULTI output field 'vir_det_smb:0' [map vir_det_smb->vir_det_smb]
+Total[0.9259] Parsed MULTI output field 'vir_det_mail:0' [map vir_det_mail->vir_det_mail]
+Total[0.9285] Parsed MULTI output field 'min:1.1640' [map min->min]
+Total[0.9285] Parsed MULTI output field 'avg:1.2384' [map avg->avg]
+Total[0.9286] Parsed MULTI output field 'max:1.5280' [map max->max]
+Total[0.9286] Parsed MULTI output field 'dev:0.0739' [map dev->dev]
+Total[0.9286] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[0.9291] Parsed MULTI output field '1min:0.05' [map 1min->load_1min]
+Total[0.9291] Parsed MULTI output field '5min:0.15' [map 5min->load_5min]
+Total[0.9291] Parsed MULTI output field '10min:0.18' [map 10min->load_15min]
+Total[0.9292] Parsed MULTI output field 'min:0.2590' [map min->min]
+Total[0.9293] Parsed MULTI output field 'avg:0.3130' [map avg->avg]
+Total[0.9293] Parsed MULTI output field 'max:0.4170' [map max->max]
+Total[0.9293] Parsed MULTI output field 'dev:0.0439' [map dev->dev]
+Total[0.9293] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[0.9294] Parsed MULTI output field 'min:0.2270' [map min->min]
+Total[0.9294] Parsed MULTI output field 'avg:0.2976' [map avg->avg]
+Total[0.9294] Parsed MULTI output field 'max:0.6150' [map max->max]
+Total[0.9294] Parsed MULTI output field 'dev:0.0832' [map dev->dev]
+Total[0.9294] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[0.9296] Parsed MULTI output field 'min:0.2290' [map min->min]
+Total[0.9296] Parsed MULTI output field 'avg:0.2646' [map avg->avg]
+Total[0.9296] Parsed MULTI output field 'max:0.3580' [map max->max]
+Total[0.9296] Parsed MULTI output field 'dev:0.0354' [map dev->dev]
+Total[0.9296] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[0.9297] Parsed MULTI output field 'min:0.2480' [map min->min]
+Total[0.9297] Parsed MULTI output field 'avg:0.3132' [map avg->avg]
+Total[0.9297] Parsed MULTI output field 'max:0.4160' [map max->max]
+Total[0.9297] Parsed MULTI output field 'dev:0.0501' [map dev->dev]
+Total[0.9298] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[0.9299] Parsed MULTI output field 'min:0.2420' [map min->min]
+Total[0.9299] Parsed MULTI output field 'avg:0.3054' [map avg->avg]
+Total[0.9299] Parsed MULTI output field 'max:0.4200' [map max->max]
+Total[0.9299] Parsed MULTI output field 'dev:0.0521' [map dev->dev]
+Total[0.9299] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[0.9300] Parsed MULTI output field 'min:0.2330' [map min->min]
+Total[0.9300] Parsed MULTI output field 'avg:0.2734' [map avg->avg]
+Total[0.9301] Parsed MULTI output field 'max:0.3710' [map max->max]
+Total[0.9301] Parsed MULTI output field 'dev:0.0301' [map dev->dev]
+Total[0.9301] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+OK u:0.00 s:0.00 r:0.03
+OK u:0.00 s:0.00 r:0.03
+OK u:0.00 s:0.00 r:0.04
+OK u:0.00 s:0.00 r:0.04
+OK u:0.00 s:0.00 r:0.04
+OK u:0.00 s:0.00 r:0.04
+OK u:0.00 s:0.00 r:0.04
+Total[0.9726] Parsed MULTI output field 'min:0.2550' [map min->min]
+Total[0.9726] Parsed MULTI output field 'avg:0.3356' [map avg->avg]
+Total[0.9726] Parsed MULTI output field 'max:1.1070' [map max->max]
+Total[0.9726] Parsed MULTI output field 'dev:0.1797' [map dev->dev]
+Total[0.9726] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+OK u:0.00 s:0.00 r:0.05
+OK u:0.00 s:0.00 r:0.05
+OK u:0.00 s:0.00 r:0.05
+OK u:0.00 s:0.00 r:0.05
+OK u:0.00 s:0.00 r:0.05
+OK u:0.00 s:0.00 r:0.06
+OK u:0.00 s:0.01 r:0.06
+OK u:0.00 s:0.01 r:0.06
+OK u:0.00 s:0.01 r:0.06
+OK u:0.00 s:0.01 r:0.06
+OK u:0.00 s:0.01 r:0.07
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+OK u:0.00 s:0.01 r:0.07
+OK u:0.00 s:0.01 r:0.07
+OK u:0.00 s:0.01 r:0.07
+OK u:0.00 s:0.01 r:0.07
+OK u:0.00 s:0.01 r:0.07
+OK u:0.00 s:0.01 r:0.08
+OK u:0.00 s:0.01 r:0.08
+OK u:0.00 s:0.01 r:0.08
+OK u:0.00 s:0.01 r:0.08
+OK u:0.00 s:0.01 r:0.08
+OK u:0.00 s:0.01 r:0.09
+OK u:0.00 s:0.01 r:0.09
+OK u:0.00 s:0.01 r:0.09
+OK u:0.00 s:0.01 r:0.09
+OK u:0.00 s:0.01 r:0.09
+OK u:0.00 s:0.01 r:0.09
+OK u:0.00 s:0.01 r:0.10
+OK u:0.00 s:0.01 r:0.10
+OK u:0.00 s:0.01 r:0.10
+OK u:0.00 s:0.01 r:0.10
+OK u:0.00 s:0.01 r:0.10
+OK u:0.00 s:0.01 r:0.11
+OK u:0.00 s:0.01 r:0.11
+OK u:0.00 s:0.01 r:0.11
+OK u:0.00 s:0.01 r:0.11
+OK u:0.00 s:0.01 r:0.11
+OK u:0.00 s:0.01 r:0.11
+OK u:0.00 s:0.01 r:0.12
+OK u:0.00 s:0.01 r:0.12
+OK u:0.00 s:0.01 r:0.12
+OK u:0.00 s:0.01 r:0.12
+OK u:0.00 s:0.01 r:0.12
+OK u:0.00 s:0.01 r:0.12
+OK u:0.00 s:0.01 r:0.12
+OK u:0.00 s:0.01 r:0.13
+Waiting on 9 of 9 pollers.
+Total[1.9806] Parsed MULTI output field 'min:0.5290' [map min->min]
+Total[1.9806] Parsed MULTI output field 'avg:0.5781' [map avg->avg]
+Total[1.9806] Parsed MULTI output field 'max:0.6630' [map max->max]
+Total[1.9806] Parsed MULTI output field 'dev:0.0355' [map dev->dev]
+Total[1.9806] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[1.9808] Parsed MULTI output field 'min:0.2660' [map min->min]
+Total[1.9808] Parsed MULTI output field 'avg:0.3088' [map avg->avg]
+Total[1.9808] Parsed MULTI output field 'max:0.3720' [map max->max]
+Total[1.9808] Parsed MULTI output field 'dev:0.0243' [map dev->dev]
+Total[1.9808] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+OK u:0.00 s:0.01 r:1.07
+OK u:0.00 s:0.01 r:1.07
+OK u:0.00 s:0.01 r:1.07
+OK u:0.00 s:0.01 r:1.08
+OK u:0.00 s:0.01 r:1.08
+OK u:0.00 s:0.01 r:1.08
+OK u:0.00 s:0.01 r:1.08
+OK u:0.00 s:0.01 r:1.08
+OK u:0.00 s:0.01 r:1.08
+OK u:0.00 s:0.01 r:1.08
+OK u:0.00 s:0.01 r:1.09
+OK u:0.00 s:0.01 r:1.09
+OK u:0.00 s:0.01 r:1.09
+OK u:0.00 s:0.01 r:1.09
+Waiting on 5 of 9 pollers.
+Total[3.0062] Parsed MULTI output field '1min:0.05' [map 1min->load_1min]
+Total[3.0062] Parsed MULTI output field '5min:0.15' [map 5min->load_5min]
+Total[3.0062] Parsed MULTI output field '10min:0.18' [map 10min->load_15min]
+ERROR: Not enough arguments
+OK u:0.00 s:0.01 r:2.09
+Waiting on 9 of 9 pollers.
+Total[4.0196] Parsed MULTI output field 'min:0.3290' [map min->min]
+Total[4.0196] Parsed MULTI output field 'avg:0.4084' [map avg->avg]
+Total[4.0196] Parsed MULTI output field 'max:0.5020' [map max->max]
+Total[4.0196] Parsed MULTI output field 'dev:0.0432' [map dev->dev]
+Total[4.0196] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[4.0197] Parsed MULTI output field 'min:0.3610' [map min->min]
+Total[4.0198] Parsed MULTI output field 'avg:0.4147' [map avg->avg]
+Total[4.0198] Parsed MULTI output field 'max:0.5190' [map max->max]
+Total[4.0198] Parsed MULTI output field 'dev:0.0333' [map dev->dev]
+Total[4.0198] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[4.0199] Parsed MULTI output field 'min:0.3040' [map min->min]
+Total[4.0199] Parsed MULTI output field 'avg:0.4023' [map avg->avg]
+Total[4.0199] Parsed MULTI output field 'max:0.5070' [map max->max]
+Total[4.0199] Parsed MULTI output field 'dev:0.0417' [map dev->dev]
+Total[4.0200] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[4.0201] Parsed MULTI output field 'ips_detected:0' [map ips_detected->ips_detected]
+Total[4.0201] Parsed MULTI output field 'ips_blocked:0' [map ips_blocked->ips_blocked]
+Total[4.0201] Parsed MULTI output field 'ips_crit:0' [map ips_crit->ips_crit]
+Total[4.0201] Parsed MULTI output field 'ips_high:0' [map ips_high->ips_high]
+Total[4.0201] Parsed MULTI output field 'ips_ano:0' [map ips_ano->ips_ano]
+OK u:0.00 s:0.01 r:3.12
+OK u:0.00 s:0.01 r:3.13
+OK u:0.00 s:0.01 r:3.13
+OK u:0.00 s:0.01 r:3.13
+OK u:0.00 s:0.02 r:3.13
+OK u:0.00 s:0.02 r:3.13
+OK u:0.00 s:0.02 r:3.13
+OK u:0.00 s:0.02 r:3.14
+OK u:0.00 s:0.02 r:3.14
+OK u:0.00 s:0.02 r:3.14
+OK u:0.00 s:0.02 r:3.14
+OK u:0.00 s:0.02 r:3.14
+OK u:0.00 s:0.02 r:3.14
+OK u:0.00 s:0.02 r:3.15
+OK u:0.00 s:0.02 r:3.15
+OK u:0.00 s:0.02 r:3.15
+OK u:0.00 s:0.02 r:3.15
+OK u:0.00 s:0.02 r:3.15
+OK u:0.00 s:0.02 r:3.16
+OK u:0.00 s:0.02 r:3.16
+OK u:0.00 s:0.02 r:3.16
+OK u:0.00 s:0.02 r:3.16
+OK u:0.00 s:0.02 r:3.17
+OK u:0.00 s:0.02 r:3.17
+OK u:0.00 s:0.02 r:3.17
+OK u:0.00 s:0.02 r:3.17
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+OK u:0.00 s:0.02 r:3.17
+OK u:0.00 s:0.02 r:3.17
+OK u:0.00 s:0.02 r:3.18
+OK u:0.00 s:0.02 r:3.18
+OK u:0.00 s:0.02 r:3.18
+OK u:0.00 s:0.02 r:3.18
+OK u:0.00 s:0.02 r:3.18
+OK u:0.00 s:0.02 r:3.18
+OK u:0.00 s:0.02 r:3.19
+OK u:0.00 s:0.02 r:3.19
+OK u:0.00 s:0.02 r:3.19
+Waiting on 7 of 9 pollers.
+Total[5.0721] Parsed MULTI output field 'min:0.4020' [map min->min]
+Total[5.0721] Parsed MULTI output field 'avg:0.4404' [map avg->avg]
+Total[5.0721] Parsed MULTI output field 'max:0.5590' [map max->max]
+Total[5.0721] Parsed MULTI output field 'dev:0.0376' [map dev->dev]
+Total[5.0721] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+ERROR: Not enough arguments
+OK u:0.00 s:0.02 r:4.16
+ERROR: Not enough arguments
+OK u:0.00 s:0.02 r:4.16
+OK u:0.00 s:0.02 r:4.16
+OK u:0.00 s:0.02 r:4.16
+OK u:0.00 s:0.02 r:4.16
+OK u:0.00 s:0.02 r:4.16
+OK u:0.00 s:0.02 r:4.17
+OK u:0.00 s:0.02 r:4.17
+OK u:0.00 s:0.02 r:4.17
+OK u:0.00 s:0.02 r:4.17
+OK u:0.00 s:0.02 r:4.17
+OK u:0.00 s:0.02 r:4.18
+Waiting on 6 of 9 pollers.
+Total[6.0919] Parsed MULTI output field 'bytesread:0' [map bytesread->bytesread]
+Total[6.0919] Parsed MULTI output field 'byteswritten:0' [map byteswritten->byteswritten]
+Total[6.0921] Parsed MULTI output field 'min:0.0200' [map min->min]
+Total[6.0921] Parsed MULTI output field 'avg:0.0256' [map avg->avg]
+Total[6.0921] Parsed MULTI output field 'max:0.0400' [map max->max]
+Total[6.0922] Parsed MULTI output field 'dev:0.0044' [map dev->dev]
+Total[6.0922] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[6.0923] Parsed MULTI output field 'reads:0' [map reads->reads]
+Total[6.0923] Parsed MULTI output field 'writes:0' [map writes->writes]
+Total[6.0929] Parsed MULTI output field '1min:0.05' [map 1min->load_1min]
+Total[6.0930] Parsed MULTI output field '5min:0.14' [map 5min->load_5min]
+Total[6.0930] Parsed MULTI output field '10min:0.18' [map 10min->load_15min]
+Total[6.0956] Parsed MULTI output field 'min:0.2980' [map min->min]
+Total[6.0956] Parsed MULTI output field 'avg:0.3626' [map avg->avg]
+Total[6.0956] Parsed MULTI output field 'max:0.5440' [map max->max]
+Total[6.0956] Parsed MULTI output field 'dev:0.0635' [map dev->dev]
+Total[6.0957] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+OK u:0.00 s:0.02 r:5.18
+OK u:0.00 s:0.02 r:5.18
+OK u:0.00 s:0.02 r:5.18
+OK u:0.00 s:0.02 r:5.18
+OK u:0.00 s:0.02 r:5.19
+OK u:0.00 s:0.02 r:5.19
+OK u:0.00 s:0.02 r:5.19
+OK u:0.00 s:0.02 r:5.19
+OK u:0.00 s:0.02 r:5.19
+Waiting on 5 of 9 pollers.
+Waiting on 5 of 9 pollers.
+Waiting on 5 of 9 pollers.
+Waiting on 5 of 9 pollers.
+Total[10.1345] Parsed MULTI output field 'min:1.7520' [map min->min]
+Total[10.1345] Parsed MULTI output field 'avg:2.6680' [map avg->avg]
+Total[10.1345] Parsed MULTI output field 'max:1.9140' [map max->max]
+Total[10.1346] Parsed MULTI output field 'dev:1.2727' [map dev->dev]
+Total[10.1346] Parsed MULTI output field 'loss:45.0000' [map loss->loss]
+OK u:0.00 s:0.02 r:9.21
+Waiting on 4 of 9 pollers.
+Total[11.1442] Parsed MULTI output field 'min:1.7290' [map min->min]
+Total[11.1442] Parsed MULTI output field 'avg:2.3654' [map avg->avg]
+Total[11.1442] Parsed MULTI output field 'max:1.8750' [map max->max]
+Total[11.1442] Parsed MULTI output field 'dev:0.9170' [map dev->dev]
+Total[11.1443] Parsed MULTI output field 'loss:35.0000' [map loss->loss]
+OK u:0.00 s:0.02 r:10.22
+OK u:0.00 s:0.02 r:10.23
+Waiting on 4 of 9 pollers.
+Total[12.1538] Parsed MULTI output field 'min:1.7190' [map min->min]
+Total[12.1539] Parsed MULTI output field 'avg:2.9955' [map avg->avg]
+Total[12.1539] Parsed MULTI output field 'max:1.8040' [map max->max]
+Total[12.1539] Parsed MULTI output field 'dev:1.6915' [map dev->dev]
+Total[12.1539] Parsed MULTI output field 'loss:55.0000' [map loss->loss]
+Total[12.1540] Parsed MULTI output field 'min:0.3330' [map min->min]
+Total[12.1540] Parsed MULTI output field 'avg:0.4168' [map avg->avg]
+Total[12.1541] Parsed MULTI output field 'max:0.5030' [map max->max]
+Total[12.1541] Parsed MULTI output field 'dev:0.0419' [map dev->dev]
+Total[12.1541] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[12.1542] Parsed MULTI output field 'min:0.3250' [map min->min]
+Total[12.1542] Parsed MULTI output field 'avg:0.4037' [map avg->avg]
+Total[12.1542] Parsed MULTI output field 'max:0.4470' [map max->max]
+Total[12.1542] Parsed MULTI output field 'dev:0.0354' [map dev->dev]
+Total[12.1543] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+OK u:0.00 s:0.03 r:11.23
+OK u:0.00 s:0.03 r:11.24
+OK u:0.00 s:0.03 r:11.24
+ERROR: Not enough arguments
+Waiting on 4 of 9 pollers.
+Total[13.1658] Parsed MULTI output field 'min:1.7930' [map min->min]
+Total[13.1658] Parsed MULTI output field 'avg:3.3587' [map avg->avg]
+Total[13.1658] Parsed MULTI output field 'max:1.9650' [map max->max]
+Total[13.1658] Parsed MULTI output field 'dev:2.0584' [map dev->dev]
+Total[13.1658] Parsed MULTI output field 'loss:60.0000' [map loss->loss]
+Total[13.1660] Parsed MULTI output field 'min:0.3860' [map min->min]
+Total[13.1660] Parsed MULTI output field 'avg:0.4287' [map avg->avg]
+Total[13.1660] Parsed MULTI output field 'max:0.6510' [map max->max]
+Total[13.1660] Parsed MULTI output field 'dev:0.0542' [map dev->dev]
+Total[13.1660] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[13.1662] Parsed MULTI output field 'min:0.3550' [map min->min]
+Total[13.1662] Parsed MULTI output field 'avg:0.4084' [map avg->avg]
+Total[13.1662] Parsed MULTI output field 'max:0.4750' [map max->max]
+Total[13.1662] Parsed MULTI output field 'dev:0.0358' [map dev->dev]
+Total[13.1662] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+OK u:0.00 s:0.03 r:12.24
+OK u:0.00 s:0.03 r:12.24
+OK u:0.00 s:0.03 r:12.25
+Waiting on 4 of 9 pollers.
+Total[14.1810] Parsed MULTI output field 'min:1.7140' [map min->min]
+Total[14.1810] Parsed MULTI output field 'avg:2.8164' [map avg->avg]
+Total[14.1811] Parsed MULTI output field 'max:1.9250' [map max->max]
+Total[14.1811] Parsed MULTI output field 'dev:1.4663' [map dev->dev]
+Total[14.1811] Parsed MULTI output field 'loss:50.0000' [map loss->loss]
+Total[14.1812] Parsed MULTI output field 'min:1.7260' [map min->min]
+Total[14.1812] Parsed MULTI output field 'avg:3.6815' [map avg->avg]
+Total[14.1812] Parsed MULTI output field 'max:1.8790' [map max->max]
+Total[14.1813] Parsed MULTI output field 'dev:2.4249' [map dev->dev]
+Total[14.1813] Parsed MULTI output field 'loss:65.0000' [map loss->loss]
+Total[14.1814] Parsed MULTI output field 'min:1.8310' [map min->min]
+Total[14.1814] Parsed MULTI output field 'avg:3.4247' [map avg->avg]
+Total[14.1814] Parsed MULTI output field 'max:2.0070' [map max->max]
+Total[14.1814] Parsed MULTI output field 'dev:2.1039' [map dev->dev]
+Total[14.1814] Parsed MULTI output field 'loss:60.0000' [map loss->loss]
+OK u:0.00 s:0.03 r:13.26
+OK u:0.00 s:0.03 r:13.27
+OK u:0.00 s:0.03 r:13.27
+OK u:0.00 s:0.03 r:13.27
+OK u:0.00 s:0.03 r:13.27
+OK u:0.00 s:0.03 r:13.27
+Waiting on 2 of 9 pollers.
+Total[15.1969] Parsed MULTI output field 'min:1.8430' [map min->min]
+Total[15.1969] Parsed MULTI output field 'avg:3.7754' [map avg->avg]
+Total[15.1969] Parsed MULTI output field 'max:1.9550' [map max->max]
+Total[15.1969] Parsed MULTI output field 'dev:2.4925' [map dev->dev]
+Total[15.1969] Parsed MULTI output field 'loss:65.0000' [map loss->loss]
+Total[15.1970] Parsed MULTI output field 'min:0.5040' [map min->min]
+Total[15.1971] Parsed MULTI output field 'avg:1.5545' [map avg->avg]
+Total[15.1971] Parsed MULTI output field 'max:0.6250' [map max->max]
+Total[15.1971] Parsed MULTI output field 'dev:0.8095' [map dev->dev]
+Total[15.1971] Parsed MULTI output field 'loss:50.0000' [map loss->loss]
+Total[15.1972] Parsed MULTI output field 'min:0.4290' [map min->min]
+Total[15.1972] Parsed MULTI output field 'avg:2.3609' [map avg->avg]
+Total[15.1972] Parsed MULTI output field 'max:0.6120' [map max->max]
+Total[15.1973] Parsed MULTI output field 'dev:1.5534' [map dev->dev]
+Total[15.1973] Parsed MULTI output field 'loss:65.0000' [map loss->loss]
+OK u:0.00 s:0.03 r:14.28
+OK u:0.00 s:0.03 r:14.28
+OK u:0.00 s:0.03 r:14.28
+OK u:0.00 s:0.03 r:14.28
+OK u:0.00 s:0.03 r:14.29
+OK u:0.00 s:0.03 r:14.29
+OK u:0.00 s:0.03 r:14.29
+OK u:0.00 s:0.03 r:14.29
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Total[20.2444] Parsed MULTI output field 'min:0.3190' [map min->min]
+Total[20.2444] Parsed MULTI output field 'avg:1.0151' [map avg->avg]
+Total[20.2444] Parsed MULTI output field 'max:0.6430' [map max->max]
+Total[20.2444] Parsed MULTI output field 'dev:0.4428' [map dev->dev]
+Total[20.2444] Parsed MULTI output field 'loss:35.0000' [map loss->loss]
+OK u:0.00 s:0.03 r:19.32
+OK u:0.00 s:0.03 r:19.32
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Total[26.2931] Parsed MULTI output field 'min:1.7090' [map min->min]
+Total[26.2931] Parsed MULTI output field 'avg:3.3188' [map avg->avg]
+Total[26.2932] Parsed MULTI output field 'max:1.8970' [map max->max]
+Total[26.2932] Parsed MULTI output field 'dev:2.0311' [map dev->dev]
+Total[26.2932] Parsed MULTI output field 'loss:60.0000' [map loss->loss]
+OK u:0.00 s:0.03 r:25.37
+OK u:0.00 s:0.03 r:25.37
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+Waiting on 2 of 9 pollers.
+^CTotal[52.5028] WARNING: Cacti Master Poller process terminated by user
