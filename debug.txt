@@ -431,3 +431,55 @@ Waiting on 2 of 9 pollers.
 Waiting on 2 of 9 pollers.
 Waiting on 2 of 9 pollers.
 ^CTotal[52.5028] WARNING: Cacti Master Poller process terminated by user
+
+
+root@5f47bfab75b9:/# grep -E "RRD.*(5018|5055|5025)" /var/www/html/infiworxnms-core/log/cacti.log
+root@5f47bfab75b9:/# php /var/www/html/infiworxnms-core/poller.php --force --debug
+Total[0.0004] NOTE: Poller Int: '60', Cactid/Cron Int: '60', Time Since Last: '41.06', Max Runtime '58', Poller Runs: '1'
+Total[0.0100] WARNING: Poller Output Table not Empty.  Issues: 3, DS[5023, 5016, 5053]
+Total[0.0108] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=0 --last=136 --mibs]
+Total[0.1120] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=137 --last=145 --mibs]
+Total[0.2131] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=146 --last=159 --mibs]
+Total[0.3141] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=220 --last=225 --mibs]
+Total[0.4152] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=226 --last=232 --mibs]
+Total[0.5163] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=233 --last=239 --mibs]
+Total[0.6174] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=240 --last=246 --mibs]
+Total[0.7185] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=247 --last=254 --mibs]
+Total[0.8196] DEBUG: About to Spawn a Remote Process [CMD: /usr/sbin/spine, ARGS:  --poller=1 --first=255 --last=260 --mibs]
+Waiting on 9 of 9 pollers.
+Total[0.9239] Parsed MULTI output field 'min:0.2150' [map min->min]
+Total[0.9239] Parsed MULTI output field 'avg:0.2303' [map avg->avg]
+Total[0.9240] Parsed MULTI output field 'max:0.2450' [map max->max]
+Total[0.9240] Parsed MULTI output field 'dev:0.0079' [map dev->dev]
+Total[0.9240] Parsed MULTI output field 'loss:0.0000' [map loss->loss]
+Total[0.9243] Parsed MULTI output field 'total:9' [map total->total]
+Total[0.9243] Parsed MULTI output field 'down:5' [map down->down]
+OK u:0.00 s:0.00 r:0.01
+OK u:0.00 s:0.00 r:0.01
+OK u:0.00 s:0.00 r:0.01
+OK u:0.00 s:0.00 r:0.01
+OK u:0.00 s:0.00 r:0.02
+OK u:0.00 s:0.00 r:0.02
+OK u:0.00 s:0.00 r:0.02
+OK u:0.00 s:0.00 r:0.02
+ERROR: Not enough arguments
+ERROR: Not enough arguments
+OK u:0.00 s:0.00 r:0.02
+OK u:0.00 s:0.00 r:0.02
+OK u:0.00 s:0.00 r:0.02
+OK u:0.00 s:0.00 r:0.02
+OK u:0.00 s:0.00 r:0.02
+OK u:0.00 s:0.00 r:0.02
+OK u:0.00 s:0.00 r:0.02
+OK u:0.00 s:0.00 r:0.02
+Waiting on 2 of 9 pollers.
+2026-06-10 12:14:45 - SYSTEM STATS: Time:2.9432 Method:spine Processes:10 Threads:10 Hosts:67 HostsPerProcess:7 DataSources:304 RRDsProcessed:18
+Total[3.0752] DEBUG: About to Spawn a Remote Process [CMD: /usr/bin/php, ARGS: -q /var/www/html/infiworxnms-core/poller_reports.php]
+Total[3.0763] DEBUG: About to Spawn a Remote Process [CMD: /usr/bin/php, ARGS: -q '/var/www/html/infiworxnms-core/poller_spikekill.php']
+Total[3.0772] DEBUG: About to Spawn a Remote Process [CMD: /usr/bin/php, ARGS:  -q '/var/www/html/infiworxnms-core/poller_automation.php' -M]
+Total[3.0782] DEBUG: About to Spawn a Remote Process [CMD: /usr/bin/php, ARGS:  -q '/var/www/html/infiworxnms-core/poller_maintenance.php']
+Total[3.0795] DEBUG: About to Spawn a Remote Process [CMD: /usr/bin/php, ARGS:  -q /var/www/html/infiworxnms-core/plugins/servcheck/poller_servcheck.php]
+Total[3.0825] DEBUG: About to Spawn a Remote Process [CMD: /usr/bin/php, ARGS: /var/www/html/infiworxnms-core/plugins/thold/poller_thold.php]
+Total[3.0836] DEBUG: About to Spawn a Remote Process [CMD: /usr/bin/php, ARGS:  -q /var/www/html/infiworxnms-core/plugins/monitor/poller_monitor.php]
+Total[3.0847] DEBUG: About to Spawn a Remote Process [CMD: /usr/bin/php, ARGS: -q /var/www/html/infiworxnms-core/plugins/wmi/poller_wmi.php -M]
+root@5f47bfab75b9:/# 
