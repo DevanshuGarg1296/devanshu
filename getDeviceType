@@ -1,0 +1,105 @@
+apt update
+apt install -y sudo
+
+visudo
+
+
+www-data ALL=(root) NOPASSWD: /usr/bin/nmap
+
+
+Test:
+
+su -s /bin/bash www-data -c "sudo /usr/bin/nmap -O 192.168.1.194"
+
+
+Curl Command: - 
+
+curl "http://192.168.1.194:8097/infiworxnms-core/get_device_type_for_ip.php?ip=192.168.1.194"
+
+
+2. Commit the container to a new image
+docker commit bcf6eafbdebd infiworx/nms:latest
+
+
+3. docker images
+
+
+<?php
+
+header('Content-Type: application/json');
+
+function getDeviceType($ip)
+{
+    if (!filter_var($ip, FILTER_VALIDATE_IP)) {
+        return ["error" => "Invalid IP address"];
+    }
+
+    $ipEscaped = escapeshellarg($ip);
+
+    // Run nmap via sudo
+    $command = "sudo /usr/bin/nmap -sT -O $ipEscaped 2>&1";
+
+    $output = [];
+    $status = 0;
+
+    exec($command, $output, $status);
+
+    if ($status !== 0) {
+        return [
+            "error"     => "nmap execution failed",
+            "exit_code" => $status,
+            "command"   => $command,
+            "output"    => $output
+        ];
+    }
+
+    $result = implode("\n", $output);
+    $resultLower = strtolower($result);
+
+    $deviceTypes = [
+        "Router"      => ["router", "gateway"],
+        "Switch"      => ["switch"],
+        "Firewall"    => ["firewall", "pfsense", "fortigate", "checkpoint"],
+        "Wireless AP" => ["wireless", "access point", "wifi"],
+        "Server"      => ["linux", "unix", "server"],
+        "PC"          => ["windows", "desktop"],
+        "Mobile"      => ["android", "iphone", "ios"],
+        "Printer"     => ["printer", "jetdirect"],
+        "IP Camera"   => ["camera", "ipcam", "webcam"],
+        "NVR"         => ["nvr", "video recorder"],
+        "VM"          => ["vmware", "virtualbox", "kvm", "hyper-v"]
+    ];
+
+    foreach ($deviceTypes as $type => $keywords) {
+        foreach ($keywords as $keyword) {
+            if (strpos($resultLower, $keyword) !== false) {
+                return [
+                    "ip"          => $ip,
+                    "device_type" => $type,
+                    "command"     => $command
+                ];
+            }
+        }
+    }
+
+    return [
+        "ip"          => $ip,
+        "device_type" => "Unknown",
+        "command"     => $command
+    ];
+}
+
+if (!isset($_GET['ip'])) {
+    echo json_encode([
+        "error" => "Missing 'ip' parameter"
+    ], JSON_PRETTY_PRINT);
+    exit;
+}
+
+echo json_encode(
+    getDeviceType($_GET['ip']),
+    JSON_PRETTY_PRINT
+);
+
+
+docker commit containername newname
