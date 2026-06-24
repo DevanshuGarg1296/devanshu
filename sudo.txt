@@ -1,51 +1,72 @@
-oot@localhost:~/NMS_Deployment/infiworx-nms-core# podman exec -it infiworxnms-core bash
 root@5f47bfab75b9:/# apt update
-apt install -y sudo
-Ign:1 http://archive.ubuntu.com/ubuntu noble InRelease                   
-Ign:2 http://security.ubuntu.com/ubuntu noble-security InRelease         
-Ign:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease           
-Ign:2 http://security.ubuntu.com/ubuntu noble-security InRelease         
-Ign:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease         
-Ign:2 http://security.ubuntu.com/ubuntu noble-security InRelease         
-Ign:1 http://archive.ubuntu.com/ubuntu noble InRelease                   
-Err:2 http://security.ubuntu.com/ubuntu noble-security InRelease         
-  Temporary failure resolving 'security.ubuntu.com'
-Ign:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
-Ign:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
-Ign:1 http://archive.ubuntu.com/ubuntu noble InRelease
-Ign:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
-Ign:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
-Err:1 http://archive.ubuntu.com/ubuntu noble InRelease
-  Temporary failure resolving 'archive.ubuntu.com'
-Err:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
-  Temporary failure resolving 'archive.ubuntu.com'
-Err:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
-  Temporary failure resolving 'archive.ubuntu.com'
-Reading package lists... Done        
+Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease 
+Get:3 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [966 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [57.4 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1486 kB]      
+Get:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [97.2 kB]        
+Get:8 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1308 kB]         
+Get:9 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [43.8 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]                 
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1286 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [243 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2108 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [535 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1383 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [49.5 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [887 B]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [48.9 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [6343 B]
+Get:20 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [35.9 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [11.4 kB]
+Fetched 10.0 MB in 3s (3438 kB/s)                                 
+Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
-103 packages can be upgraded. Run 'apt list --upgradable' to see them.
-W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble/InRelease  Temporary failure resolving 'archive.ubuntu.com'
-W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  Temporary failure resolving 'archive.ubuntu.com'
-W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  Temporary failure resolving 'archive.ubuntu.com'
-W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
-W: Some index files failed to download. They have been ignored, or old ones used instead.
+116 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@5f47bfab75b9:/# apt install -y sudo
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
 The following NEW packages will be installed:
   sudo
-0 upgraded, 1 newly installed, 0 to remove and 103 not upgraded.
+0 upgraded, 1 newly installed, 0 to remove and 116 not upgraded.
 2 not fully installed or removed.
 Need to get 948 kB of archives.
 After this operation, 3551 kB of additional disk space will be used.
-Ign:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 sudo amd64 1.9.15p5-3ubuntu5.24.04.2
-Ign:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 sudo amd64 1.9.15p5-3ubuntu5.24.04.2
-Ign:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 sudo amd64 1.9.15p5-3ubuntu5.24.04.2
-Ign:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 sudo amd64 1.9.15p5-3ubuntu5.24.04.2
-Err:1 http://security.ubuntu.com/ubuntu noble-updates/main amd64 sudo amd64 1.9.15p5-3ubuntu5.24.04.2
-  Temporary failure resolving 'archive.ubuntu.com'
-E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.9.15p5-3ubuntu5.24.04.2_amd64.deb  Temporary failure resolving 'archive.ubuntu.com'
-E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 sudo amd64 1.9.15p5-3ubuntu5.24.04.2 [948 kB]
+Fetched 948 kB in 0s (4461 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package sudo.
+(Reading database ... 30759 files and directories currently installed.)
+Preparing to unpack .../sudo_1.9.15p5-3ubuntu5.24.04.2_amd64.deb ...
+Unpacking sudo (1.9.15p5-3ubuntu5.24.04.2) ...
+Setting up mysql-server-8.0 (8.0.45-0ubuntu0.24.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of stop.
+Renaming removed key_buffer and myisam-recover options (if present)
+mysqld will log errors to /var/log/mysql/error.log
+mysqld is running as pid 391202
+Error: Unable to shut down server with process id 391202
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+dpkg: dependency problems prevent configuration of default-mysql-server:
+ default-mysql-server depends on mysql-server-8.0; however:
+  Package mysql-server-8.0 is not configured yet.
+
+dpkg: error processing package default-mysql-server (--configure):
+ dependency problems - leaving unconfigured
+Setting up sudo (1.9.15p5-3ubuntu5.24.04.2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+Errors were encountered while processing:
+ mysql-server-8.0
+ default-mysql-server
+E: Sub-process /usr/bin/dpkg returned an error code (1)
 root@5f47bfab75b9:/# su -s /bin/bash www-data -c "sudo /usr/bin/nmap -O 172.19.178.31"
-bash: line 1: sudo: command not found
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+root@5f47bfab75b9:/# 
