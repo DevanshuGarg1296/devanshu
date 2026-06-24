@@ -1,0 +1,144 @@
+<?php
+
+header('Content-Type: application/json');
+
+function getDeviceType($ip)
+{
+    // Validate IP
+    if (!filter_var($ip, FILTER_VALIDATE_IP)) {
+        return ["error" => "Invalid IP address"];
+    }
+
+    $ipEscaped = escapeshellarg($ip);
+
+    // Better scan for real-world detection
+    $command = "sudo /usr/bin/nmap -sV -Pn --top-ports 100 " . $ipEscaped . " 2>&1";
+
+    $output = [];
+    $status = 0;
+
+    exec($command, $output, $status);
+
+    if ($status !== 0) {
+        return [
+            "error" => "nmap execution failed",
+            "exit_code" => $status,
+            "command" => $command,
+            "output" => $output
+        ];
+    }
+
+    $raw = implode("\n", $output);
+    $text = strtolower($raw);
+
+    // =========================
+    // STRICT DEVICE CLASSIFIER
+    // (FIRST MATCH WINS)
+    // =========================
+
+    $type = "Unknown";
+
+    // FIREWALL (highest priority)
+    if (
+        str_contains($text, "pfsense") ||
+        str_contains($text, "fortigate") ||
+        str_contains($text, "checkpoint") ||
+        (str_contains($text, "443/tcp open") && str_contains($text, "filtered"))
+    ) {
+        $type = "Firewall";
+    }
+
+    // ROUTER
+    elseif (
+        str_contains($text, "mikrotik") ||
+        str_contains($text, "router") ||
+        str_contains($text, "gateway") ||
+        str_contains($text, "ubiquiti") ||
+        str_contains($text, "edgeos")
+    ) {
+        $type = "Router";
+    }
+
+    // SWITCH
+    elseif (
+        str_contains($text, "snmp") ||
+        str_contains($text, "cisco ios") ||
+        str_contains($text, "procurve") ||
+        str_contains($text, "switch")
+    ) {
+        $type = "Switch";
+    }
+
+    // WIRELESS AP
+    elseif (
+        str_contains($text, "access point") ||
+        str_contains($text, "wireless") ||
+        str_contains($text, "hostapd") ||
+        str_contains($text, "wifi")
+    ) {
+        $type = "Wireless AP";
+    }
+
+    // IP CAMERA
+    elseif (
+        str_contains($text, "hikvision") ||
+        str_contains($text, "dahua") ||
+        str_contains($text, "rtsp") ||
+        str_contains($text, "554/tcp")
+    ) {
+        $type = "IP Camera";
+    }
+
+    // PRINTER
+    elseif (
+        str_contains($text, "jetdirect") ||
+        str_contains($text, "9100/tcp") ||
+        str_contains($text, "printer")
+    ) {
+        $type = "Printer";
+    }
+
+    // SERVER
+    elseif (
+        str_contains($text, "ubuntu") ||
+        str_contains($text, "debian") ||
+        str_contains($text, "centos") ||
+        str_contains($text, "linux") ||
+        str_contains($text, "ssh")
+    ) {
+        $type = "Server";
+    }
+
+    // PC / WINDOWS
+    elseif (
+        str_contains($text, "windows") ||
+        str_contains($text, "microsoft")
+    ) {
+        $type = "PC";
+    }
+
+    // =========================
+    // RESPONSE
+    // =========================
+
+    return [
+        "ip" => $ip,
+        "device_type" => $type,
+        "command" => $command,
+        "raw_output" => $raw
+    ];
+}
+
+// ---------------- API ENTRY ----------------
+
+if (!isset($_GET['ip'])) {
+    echo json_encode([
+        "error" => "Missing 'ip' parameter"
+    ], JSON_PRETTY_PRINT);
+    exit;
+}
+
+echo json_encode(
+    getDeviceType($_GET['ip']),
+    JSON_PRETTY_PRINT
+);
