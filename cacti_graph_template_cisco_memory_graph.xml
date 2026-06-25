@@ -166,7 +166,7 @@
 			<item_000>
 				<data_input_field_id>hash_07010377b2e0abe66dc2c2c44cf18f696dddbd</data_input_field_id>
 				<t_value></t_value>
-				<value>192.168.1.16</value>
+				<value>|host_hostname|</value>
 			</item_000>
 			<item_001>
 				<data_input_field_id>hash_07010333ab4924b3ba6246d53a5e4f6d694c62</data_input_field_id>
