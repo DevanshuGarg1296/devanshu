@@ -1,0 +1,33 @@
+<interface>
+  <name>Cisco 2911 Memory Pools</name>
+
+  <oid_index>.1.3.6.1.4.1.9.9.48.1.1.1.2</oid_index>
+
+  <fields>
+
+    <ciscoMemPoolName>
+      <name>Pool Name</name>
+      <method>walk</method>
+      <source>value</source>
+      <direction>input</direction>
+      <oid>.1.3.6.1.4.1.9.9.48.1.1.1.2</oid>
+    </ciscoMemPoolName>
+
+    <ciscoMemPoolUsed>
+      <name>Used Memory</name>
+      <method>walk</method>
+      <source>value</source>
+      <direction>output</direction>
+      <oid>.1.3.6.1.4.1.9.9.48.1.1.1.5</oid>
+    </ciscoMemPoolUsed>
+
+    <ciscoMemPoolFree>
+      <name>Free Memory</name>
+      <method>walk</method>
+      <source>value</source>
+      <direction>output</direction>
+      <oid>.1.3.6.1.4.1.9.9.48.1.1.1.6</oid>
+    </ciscoMemPoolFree>
+
+  </fields>
+</interface>

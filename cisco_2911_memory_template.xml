@@ -1,0 +1,33 @@
+<graph_template>
+  <name>Cisco 2911 - Memory Utilization %</name>
+
+  <graph>
+
+    <t_cdef>on</t_cdef>
+
+    <items>
+
+      <item>
+        <task_item>used</task_item>
+        <color>FF0000</color>
+        <gprint_type>LAST</gprint_type>
+      </item>
+
+      <item>
+        <task_item>free</task_item>
+        <color>00FF00</color>
+        <gprint_type>LAST</gprint_type>
+      </item>
+
+    </items>
+
+  </graph>
+
+  <cdef>
+    <name>Memory Percent Used</name>
+    <text>
+      USED,USED,FREE,+,/,100,*
+    </text>
+  </cdef>
+
+</graph_template>
