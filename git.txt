@@ -23,3 +23,55 @@ hint: Disable this message with "git config set advice.diverging false"
 fatal: Not possible to fast-forward, aborting.
 root@localhost:~/NMS_Deployment/automanix-nms# 
 
+root@localhost:~/NMS_Deployment/automanix-nms# git branch
+  devanshu_automanix_nms
+  development
+* isro_main
+  main
+root@localhost:~/NMS_Deployment/automanix-nms# git status
+On branch isro_main
+Your branch and 'origin/isro_main' have diverged,
+and have 1 and 20 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+nothing to commit, working tree clean
+root@localhost:~/NMS_Deployment/automanix-nms# git log --oneline --graph --decorate --left --right HEAD...origin/isro_main
+fatal: unrecognized argument: --left
+root@localhost:~/NMS_Deployment/automanix-nms# git log --oneline --graph --decorate --left-right HEAD...origin/isro_main
+>   9b725f3b (origin/isro_main) Merge remote-tracking branch 'origin/development' into isro_main
+|\  
+| >   dd56e25d (origin/development) Merge pull request #391 from infinity-labs-dev/feature/Thold_creation
+| |\  
+| | >   5e849887 (origin/feature/Thold_creation) Merge branch 'development' of https://github.com/infinity-labs-dev/automanix-nms into feature/Thold_creation
+| | |\  
+| | |/  
+| |/|   
+| > |   74e294f0 Merge pull request #390 from infinity-labs-dev/feature/Thold_creation
+| |\ \  
+| | | > eee40f33 (}) missing
+| | |/  
+| | >   e7a96312 Merge branch 'development' of https://github.com/infinity-labs-dev/automanix-nms into feature/Thold_creation
+| | |\  
+| | |/  
+| |/|   
+| > |   b2c8ce01 Merge pull request #389 from infinity-labs-dev/feature/Thold_creation
+| |\ \  
+| | | > a5271c6e (}) missing
+| | |/  
+| | > 30673492 changes required for auto threshold creation
+| |/  
+> |   066d6f05 Merge branch 'isro_main' of https://github.com/infinity-labs-dev/automanix-nms into isro_main
+|\ \  
+| > | 19972277 Merge pull request #387 from infinity-labs-dev/development
+| |/  
+| > eb890e7c Merge branch 'isro_main' into development
+| > 6e55594d Merge pull request #386 from infinity-labs-dev/dev_piyush
+| > aa8f43b4 (origin/dev_piyush) Merge branch 'development' of https://github.com/infinity-labs-dev/automanix-nms into dev_piyush
+| > 9a549023 feat: implement DataSources and MappedServices modules with management controllers and views
+> 500458fe Merge branch 'isro_main' of https://github.com/infinity-labs-dev/automanix-nms into isro_main
+> f330315e Merge branch 'isro_main' of https://github.com/infinity-labs-dev/automanix-nms into isro_main
+> 2ea86389 Merge branch 'isro_main' of https://github.com/infinity-labs-dev/automanix-nms into isro_main
+> 2c393bea Merge branch 'isro_main' of https://github.com/infinity-labs-dev/automanix-nms into isro_main
+> a5f7820f Merge branch 'development' of https://github.com/infinity-labs-dev/automanix-nms into isro_main
+< 8232b6b3 (HEAD -> isro_main) changes for dashboard needed
+root@localhost:~/NMS_Deployment/automanix-nms# 
