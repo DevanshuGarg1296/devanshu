@@ -1,0 +1,25 @@
+root@localhost:~/NMS_Deployment/automanix-nms# git restore .
+root@localhost:~/NMS_Deployment/automanix-nms# git pull
+Password for 'https://DevanshuGarg1296@github.com': 
+remote: Enumerating objects: 69, done.
+remote: Counting objects: 100% (27/27), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 69 (delta 12), reused 20 (delta 12), pack-reused 42 (from 1)
+Unpacking objects: 100% (69/69), 54.67 KiB | 417.00 KiB/s, done.
+From https://github.com/infinity-labs-dev/automanix-nms
+   280d8219..9b725f3b  isro_main              -> origin/isro_main
+   048a896c..aa8f43b4  dev_piyush             -> origin/dev_piyush
+   84dbc4d9..dd56e25d  development            -> origin/development
+ * [new branch]        feature/Thold_creation -> origin/feature/Thold_creation
+hint: Diverging branches can't be fast-forwarded, you need to either:
+hint:
+hint: 	git merge --no-ff
+hint:
+hint: or:
+hint:
+hint: 	git rebase
+hint:
+hint: Disable this message with "git config set advice.diverging false"
+fatal: Not possible to fast-forward, aborting.
+root@localhost:~/NMS_Deployment/automanix-nms# 
+
