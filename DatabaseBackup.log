@@ -1,0 +1,5 @@
+mysqldump -h 172.19.178.31 -u infi -p nms_core user_dashboard_prefs > user_dashboard_prefs.sql
+
+mysql -h <destination_host> -u <username> -p -e "USE <destination_database>; DROP TABLE IF EXISTS user_dashboard_prefs;"
+
+mysql -h <destination_host> -u <username> -p <destination_database> < user_dashboard_prefs.sql
